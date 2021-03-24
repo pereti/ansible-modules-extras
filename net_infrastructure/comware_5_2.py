@@ -143,7 +143,7 @@ def main():
                          changed=switch.get_changed(),
                          msg=switch.get_message(),
                          ansible_facts=facts)
-    except Exception, e:
+    except Exception as e:
         msg = switch.get_message() + " %s %s" % (e.__class__, e)
         switch.fail(msg)
 
